@@ -31,4 +31,4 @@ Provides advanced features for managing search plug-ins in:
 
 Special thanks to the author of the "Classical Search Bar" plugin 田 生 for his idea and code. Also many thanks to w3schools.com for the examples, and also to Cho S. Kim (https://code.tutsplus.com/ru/articles/data-structures-with-javascript-tree--cms-23393) for the idea of implementation "tree".
 
-The latest version of the extension signed by Mozilla can be found here: [organize_search_engines_2-x.x.x-**fx**. Xpi] (https://github.com/Baton34/Organize-Search-Engines2/releases/latest)
+The latest version of the extension signed by Mozilla can be found here: [organize_search_engines_2-x.x.x-**fx**.xpi] (https://github.com/Baton34/Organize-Search-Engines2/releases/latest)
