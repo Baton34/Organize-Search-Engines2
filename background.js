@@ -103,7 +103,7 @@ const catchRequest=async function(details){
 			status: "loading",
 			title: "9f098a71-45f7-4380-a829-25a6f86503bd.invalid/search?searchTerms=*"
 		});
-		//querying.then(closeTabs, onError);
+		querying.then(closeTabs, onError);
 		browser.search.search({
 			query: searchTerms,
 			engine: settings.defaultEngine
