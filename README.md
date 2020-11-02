@@ -1,4 +1,4 @@
-# Расширение "Organize Search Engines" для Firefox
+# Расширение "Organize Search Engines 2" для Firefox
  Like OSE but not the same
 
 **_работает в FF63 и выше_**
