@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="chrome://global/skin/in-content/common.css" />
+  <link rel="stylesheet" href="options.css" />
+
+</head>
+
+<body>
+	<div id="config_panel">
+		<div id="spinfo">
+			<ul id="splist" tabindex="2">
+			</ul>
+		</div>
+		<div id="spdetail">
+			<div class="config-item">
+				<span class="config-title">
+					<span data-i18n="configTitleName"></span>
+				</span>
+				<span class="config-content">
+					<img src="data:image/svg+xml;base64,PCEtLSBUaGlzIFNvdXJjZSBDb2RlIEZvcm0gaXMgc3ViamVjdCB0byB0aGUgdGVybXMgb2YgdGhlIE1vemlsbGEgUHVibGljCiAgIC0gTGljZW5zZSwgdi4gMi4wLiBJZiBhIGNvcHkgb2YgdGhlIE1QTCB3YXMgbm90IGRpc3RyaWJ1dGVkIHdpdGggdGhpcwogICAtIGZpbGUsIFlvdSBjYW4gb2J0YWluIG9uZSBhdCBodHRwOi8vbW96aWxsYS5vcmcvTVBMLzIuMC8uIC0tPgo8c3ZnIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2IiBmaWxsPSJjb250ZXh0LWZpbGwiIGZpbGwtb3BhY2l0eT0iY29udGV4dC1maWxsLW9wYWNpdHkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTE0LjUgM0g2LjkxNGEuNS41IDAgMCAxLS4zNTQtLjE0Nkw1LjE0NiAxLjQzOUExLjQ5MSAxLjQ5MSAwIDAgMCA0LjA4NiAxSDEuNUExLjUgMS41IDAgMCAwIDAgMi41djExQTEuNSAxLjUgMCAwIDAgMS41IDE1aDEzYTEuNSAxLjUgMCAwIDAgMS41LTEuNXYtOUExLjUgMS41IDAgMCAwIDE0LjUgM3ptLjUgMTAuNWEuNS41IDAgMCAxLS41LjVoLTEzYS41LjUgMCAwIDEtLjUtLjVWNmgxNHpNMSA1VjIuNWEuNS41IDAgMCAxIC41LS41aDIuNTg2YS41LjUgMCAwIDEgLjM1NC4xNDZsMS40MTQgMS40MTVBMS40OTEgMS40OTEgMCAwIDAgNi45MTQgNEgxNC41YS41LjUgMCAwIDEgLjUuNVY1eiIvPgogIDxwYXRoIGQ9Ik0xNSAxMy41YS41LjUgMCAwIDEtLjUuNWgtMTNhLjUuNSAwIDAgMS0uNS0uNVY2aDE0eiIgZmlsbC1vcGFjaXR5PSIuMiIvPgogIDxwYXRoIGQ9Ik0xIDVWMi41YS41LjUgMCAwIDEgLjUtLjVoMi41ODZhLjUuNSAwIDAgMSAuMzU0LjE0NmwxLjQxNCAxLjQxNUExLjQ5MSAxLjQ5MSAwIDAgMCA2LjkxNCA0SDE0LjVhLjUuNSAwIDAgMSAuNS41VjV6IiBmaWxsLW9wYWNpdHk9Ii4xIi8+CiAgPHBhdGggZD0iTTE1IDEzLjVhLjUuNSAwIDAgMS0uNS41aC0xM2EuNS41IDAgMCAxLS41LS41VjEzaDE0eiIgZmlsbC1vcGFjaXR5PSIuMDUiLz4KPC9zdmc+Cg==">
+					<input id="nameinput" type="text" tabindex="3" />
+				</span>
+			</div>
+			<div class="button-line">
+				<button id="removebutton" class="button" type="button" tabindex="3">
+					<span data-i18n="removeButton"></span>
+				</button>
+				<button id="addbutton" type="button" tabindex="1">
+					<span data-i18n="addButton"></span>
+				</button>
+			</div> 
+		</div>
+	</div>
+	<div id="backup_panel">
+		<span class="backup-title config-title">
+			<span data-i18n="backupPanelTitle"></span>
+		</span>
+		<div class="button-line">
+			<button id="savebutton" type="button" tabindex="3">
+				<span data-i18n="saveButton"></span>
+			</button>
+		</div>
+	</div>
+	<script src="/js/tree.js"></script>
+	<script src="options.js"></script>
+</body>
+
+</html>

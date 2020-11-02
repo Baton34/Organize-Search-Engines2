@@ -1,0 +1,98 @@
+{
+  "extensionName": {
+    "message": "Classical Search Bar 2"
+  },
+  "extensionDescription": {
+    "message": "Simula la barra de búsqueda clásica agregando un botón para cambiar el motor de búsqueda."
+  },
+  "extensionButtonTitle": {
+    "message": "Buscar usando %S"
+  },
+  "addButton": {
+    "message": "Añadir"
+  },
+  "resetButton": {
+    "message": "Restaurar valor predeterminado"
+  },
+  "resetButtonSecondTime": {
+    "message": "Haga clic de nuevo para confirmar"
+  },
+  "configTitleName": {
+    "message": "Nombre"
+  },
+  "configTitleHomePage": {
+    "message": "Página de Inicio"
+  },
+  "configTitleSearchUrl": {
+    "message": "Buscar URL"
+  },
+  "configSearchUrlDescription": {
+    "message": "Escriba {searchTerms} como marcador de posición para los términos de búsqueda."
+  },
+  "configTitleSearchUrlPostParameters": {
+    "message": "Parámetros POST"
+  },
+  "configTitleEncoding": {
+    "message": "Codificación de Caracteres"
+  },
+  "configTitleIcon": {
+    "message": "Icono"
+  },
+  "browseButton": {
+    "message": "Buscar..."
+  },
+  "configTitleStatus": {
+    "message": "Estado"
+  },
+  "configStatusEnabled": {
+    "message": "Activado"
+  },
+  "moveUpButton": {
+    "message": "Mover Arriba"
+  },
+  "moveDownButton": {
+    "message": "Mover Abajo"
+  },
+  "saveButton": {
+    "message": "Guardar"
+  },
+  "removeButton": {
+    "message": "Eliminar"
+  },
+  "backupPanelTitle": {
+    "message": "Opciones"
+  },
+  "importOverwriteButton": {
+    "message": "Importar y Sobrescribir"
+  },
+  "importAppendButton": {
+    "message": "Importar y Añadir"
+  },
+  "importFailedAlert": {
+    "message": "Algo salió mal al importar."
+  },
+  "exportButton": {
+    "message": "Exportar"
+  },
+  "themePanelTitle": {
+    "message": "Tema"
+  },
+  "themeAutoText": {
+    "message": "Auto"
+  },
+  "themeDarkText": {
+    "message": "Oscuro"
+  },
+  "themeLightText": {
+    "message": "Claro"
+  },
+  "executeBrowserActionCommand": {
+    "message": "Mostrar la Ventana Emergente"
+  },
+  "searchProviderPrevCommand": {
+    "message": "Cambiar el buscador predeterminado ↑"
+  },
+  "searchProviderNextCommand": {
+    "message": "Cambiar el buscador predeterminado ↓"
+  }
+}

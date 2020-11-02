@@ -1,0 +1,88 @@
+img {
+  pointer-events: none;
+}
+body {
+	cursor: default;
+	-moz-user-select: none;
+	user-select: none;
+	white-space: nowrap;
+	font: message-box;
+	font-size: 15px;
+	line-height: 30px;
+	cursor: default;
+	-moz-user-select: none;
+	user-select: none;
+	padding-bottom: 2px;
+}
+ul, #engineList {
+  list-style-type: none;
+}
+
+#engineList {
+
+  margin: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: none;
+  padding: 0;
+}
+#engineList .spitem .icon {
+  transform: translateY(-50%);
+  left: 0px;
+  top: 0px;
+  margin: 5px;
+}
+#engineList .sfitem .icon {
+  top: 0px;
+  transform: translateY(-50%);
+  left: 0px;
+  margin: 5px;
+}
+#engineList .spitem .icon img {
+  width: 16px;
+  height: 16px;
+  vertical-align: -2px;
+}
+#engineList .sfitem .icon img {
+  width: 16px;
+  height: 16px;
+  vertical-align: -2px;
+}
+#engineList .spitem:hover {
+  background: #0095dd40;
+}
+#engineList .sfitem:hover {
+  background: #0095dd40;
+}
+.nested {
+  display: none;
+  margin-left: -20px;
+}
+
+.active {
+  display: block;
+}
+
+#engineList .spitem{
+  display: block;
+  line-height: 30px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-width: 1px 0;
+  white-space: nowrap; 
+  overflow: hidden;
+  position: relative;
+  direction: ltr;
+}
+#engineList .sfitem{
+
+  display: block;
+  line-height: 30px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-width: 1px 0;
+  white-space: nowrap;
+  cursor: pointer;
+  direction: ltr;
+  position: relative;
+}

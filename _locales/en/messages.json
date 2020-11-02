@@ -1,0 +1,134 @@
+{
+  "oseName": {
+    "message": "Organize Search Engines 2",
+    "description": "Name of the extension; Should be kept as is when localizing."
+  },
+  "oseDescription": {
+    "message": "Simulate classical search bar by adding a search engine switch button.",
+    "description": "Description of the extension."
+  },
+  "oseButtonTitle": {
+    "message": "Search using %s",
+    "description": "Title of the extension button. %s would be replaced to current selected search provider's name"
+  },
+  "addButton": {
+    "message": "Add",
+    "description": "A button for adding search engine in option page"
+  },
+  "resetButton": {
+    "message": "Restore Default",
+    "description": "A button for reset search engine list in option page"
+  },
+  "resetButtonSecondTime": {
+    "message": "Click Again to Confirm",
+    "description": "A button for confirm reset action"
+  },
+  "configTitleName": {
+    "message": "Name",
+    "description": "Option title for the name of a search engine"
+  },
+  "configTitleHomePage": {
+    "message": "Home Page",
+    "description": "Option title for the home page URL of a search engine"
+  },
+  "configTitleSearchUrl": {
+    "message": "Search URL",
+    "description": "Option title for the searching URL of a search engine"
+  },
+  "configTitleSearchUrlPostParameters": {
+    "message": "Post Parameters",
+    "description": "Option title for the post parameters of searching URL"
+  },
+  "configTitleEncoding": {
+    "message": "Character Encoding",
+    "description": "Option title for the input encoding of search terms"
+  },
+  "configSearchUrlDescription": {
+    "message": "Use {searchTerms} as placeholder of searching text",
+    "description": "Description of the URL of a search engine; {searchTerms} part should be kept as is when localizing"
+  },
+  "configTitleIcon": {
+    "message": "Icon",
+    "description": "Option title for the icon of a search engine"
+  },
+  "browseButton": {
+    "message": "Browse...",
+    "description": "Button for selecting icon file for search engine option"
+  },
+  "configTitleStatus": {
+    "message": "Status",
+    "description": "Option title for the status of a search engine (enable / disabled)"
+  },
+  "configStatusEnabled": {
+    "message": "Enabled",
+    "description": "Option description for the enable status of a search engine"
+  },
+  "moveUpButton": {
+    "message": "Move Up",
+    "description": "Button for moving a search engine one item up in the list"
+  },
+  "moveDownButton": {
+    "message": "Move Down",
+    "description": "Button for moving a search engine one item down in the list"
+  },
+  "saveButton": {
+    "message": "Save",
+    "description": "Button for confirming the editing of selected search engine"
+  },
+  "removeButton": {
+    "message": "Remove",
+    "description": "Button for removing a search engine from the list"
+  },
+  "backupPanelTitle": {
+    "message": "Options",
+    "description": "Title for the import / exporting section"
+  },
+  "importOverwriteButton": {
+    "message": "Import and Overwrite",
+    "description": "Button for import settings from a file"
+  },
+  "importAppendButton": {
+    "message": "Import and Append",
+    "description": "Button for import settings from a file"
+  },
+  "importFailedAlert": {
+    "message": "Something went wrong while importing.",
+    "description": "This text will be alerted to user if import failed"
+  },
+  "exportButton": {
+    "message": "Export",
+    "description": "Button for export settings to a file"
+  },
+  "themePanelTitle": {
+    "message": "Theme",
+    "description": "Title for theme section"
+  },
+  "themeAutoText": {
+    "message": "Auto",
+    "description": "The extension should try to detect browser theme automatically."
+  },
+  "themeDarkText": {
+    "message": "Dark",
+    "description": "The extension should use dark theme."
+  },
+  "themeLightText": {
+    "message": "Light",
+    "description": "The extension should use light theme."
+  },
+  "executeBrowserActionCommand": {
+    "message": "Show the Popup",
+    "description": "Title for config keyboard shotcut of execute browser action"
+  },
+  "searchProviderPrevCommand": {
+    "message": "Change the Default Search Engine ↑",
+    "description": "Title for config keyboard shotcut of changing to prev search provider"
+  },
+  "searchProviderNextCommand": {
+    "message": "Change the Default Search Engine ↓",
+    "description": "Title for config keyboard shotcut of changing to next search provider"
+  },
+  "nameUnique": {
+    "message": "Name must be unique!",
+    "description": "Name of addable folder must not equal existing search engine or folder name"
+  }
+}
