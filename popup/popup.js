@@ -11,7 +11,7 @@
 			return;
 		};
 		const menuItem=document.createElement('li');
-		menuItem.setAttribute('data-id', rootChild.name);
+		menuItem.dataset.id= rootChild.name;
 		const icon=document.createElement('span');
 		icon.setAttribute('class','icon');
 		const image=document.createElement('img');
@@ -62,8 +62,13 @@
 		for (let i = 0; i < toggler2.length; i++) {
 			toggler2[i].addEventListener("click", function(e) {
 				e.stopPropagation();
-				const id=e.target.getAttribute('data-id');
-				const icon=e.target.querySelector('.icon img').src;
+				let target=e.target;
+				if (!e.target.dataset.id) {
+					target=e.target.parentElement;
+				}
+				console.log(e.target);
+				const id=target.dataset.id;
+				const icon=target.querySelector('.icon img').src;
 				browser.runtime.sendMessage({setDefault: id, favIconUrl: icon}).then(()=> {
 					window.close();
 				});
@@ -77,8 +82,7 @@
 // ----------------------------------------------------------
 	console.log('------ start popup ------');
 	let tree=new Tree('0');
-	// 📁
-	await browser.runtime.sendMessage({getTree: true}).then(	getTreeCb,onError);
+	await browser.runtime.sendMessage({getTree: true}).then(getTreeCb,onError);
 	await renderList();
 	console.log('------ popup started ------');
 }());

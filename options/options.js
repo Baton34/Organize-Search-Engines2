@@ -11,7 +11,7 @@
 			return;
 		};
 		const menuItem=document.createElement('li');
-		menuItem.setAttribute('data-id', rootChild.name);
+		menuItem.dataset.id=rootChild.name;
 		menuItem.setAttribute('draggable',true);
 		const icon=document.createElement('span');
 		icon.setAttribute('class','icon');
@@ -43,7 +43,7 @@
 		let folders = document.getElementsByClassName("sfitem");
 		for (let i = 0; i < folders.length; i++) {
 			let state=folders[i].querySelector(".nested").classList.contains("active");
-			foldersNestedStates.push({id: folders[i].getAttribute('data-id'), nested: state});
+			foldersNestedStates.push({id: folders[i].dataset.id, nested: state});
 		};
 		const menu = document.getElementById('splist');
 		const menuItems = document.createDocumentFragment();
@@ -56,7 +56,7 @@
 		folders = document.getElementsByClassName("sfitem");
 		for (let i = 0; i < folders.length; i++) {
 			const folderToNest=foldersNestedStates.find(function(folder){
-				return folders[i].getAttribute('data-id')===folder.id;
+				return folders[i].dataset.id===folder.id;
 			});
 			if (folderToNest && folderToNest.nested) {
 				folders[i].querySelector(".nested").classList.add("active");
@@ -121,7 +121,7 @@
 	function dragStart_handler(ev) {
 		//ev.dataTransfer.dropEffect = "link";
 		// console.log('drag');
-		ev.dataTransfer.setData("text/plain", ev.target.getAttribute('data-id'));
+		ev.dataTransfer.setData("text/plain", ev.target.dataset.id);
 	};
 
 	function dragOver_handler(ev) {
@@ -134,10 +134,10 @@
 		ev.stopPropagation();
 		const data = ev.dataTransfer.getData("text/plain");
 		let target=ev.target;
-		if (!target.hasAttribute('data-id')) {
+		if (!target.dataset.id) {
 			target=ev.target.parentElement;
 		}
-		let targedId=target.getAttribute('data-id');
+		let targedId=target.dataset.id;
 		if (targedId!==data) {
 			if (target.className.startsWith('sfitem')) {
 				tree.addChild(tree.getNodeByName(data),tree.getNodeByName(targedId));
@@ -163,17 +163,8 @@
 // -------------------------------------	
 	let tree=new Tree('0');
 	let current=null;
-	// 📁
 	await sleep(100);
 	await browser.runtime.sendMessage({getTree: true}).then(	getTreeCb,onError);
-	// let node=new Node('t1');
-	// node.type=1;
-	// node.icon=folderIcon; // "\82.02\browser\themes\shared\places\folder.svg" 
-	// tree.insertNode(node,tree._root.children[2]);
-	// tree.addChild(tree._root.children[6],tree._root.children[2]);
-	// tree.addChild(tree._root.children[6],tree._root.children[2]);
-	// console.log(tree.getNodeByName('Кинозал.ТВ'));
-	
 	await renderList();
 	const placeholders = Array.from(document.querySelectorAll('[data-i18n]'));
      placeholders.forEach(span => {
@@ -212,10 +203,10 @@
 		}
 		let curr=null;
 		if (li.previousSibling){
-			curr=li.previousSibling.getAttribute('data-id');
+			curr=li.previousSibling.dataset.id;
 		}
 		else if (li.nextSibling){
-			curr=li.nextSibling.getAttribute('data-id');
+			curr=li.nextSibling.dataset.id;
 		}
 		tree.deleteNode(node,false);
 		renderList();
@@ -226,10 +217,10 @@
 		// click on engine
 		let item = event.target.closest(['.spitem','.sfitem']);
 		if (!item) { return;}
-		if (current===item.getAttribute('data-id')) {
+		if (current===item.dataset.id) {
 			return;
 		};
-		setCurrent(item.getAttribute('data-id'));
+		setCurrent(item.dataset.id);
 		//event.preventDefault();
 	});
 	document.getElementById('savebutton').addEventListener('click', saveButton);

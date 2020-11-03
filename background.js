@@ -39,7 +39,7 @@ const config = await (async function() {
 			let sett = {
 				defaultEngine : null,
 				defaultEngineIcon : null,
-				engineOrder : [],
+				version : "1",
 				engineTree : null
 			}
 			let engines = await browser.search.get();
@@ -68,9 +68,9 @@ const config = await (async function() {
 	const writeConfig = async function() {
 		const name=settings.defaultEngine;
 		const icon=settings.defaultEngineIcon;
-//		const order=settings.engineOrder;
 		const tree=settings.engineTree;
-		await browser.storage.local.set({defaultEngine: name, defaultEngineIcon: icon, /*engineOrder: order,*/ engineTree: tree});
+		const ver=settings.version
+		await browser.storage.local.set({defaultEngine: name, defaultEngineIcon: icon, version: ver, engineTree: tree});
 	}
 	return {
 		readConfig,
