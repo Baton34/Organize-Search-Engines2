@@ -97,5 +97,11 @@
   },
   "nameUnique": {
     "message": "Имя должно быть уникальным!"
+  },
+  "deletedEngines": {
+    "message": "удалено: "
+  },
+  "addedEngines": {
+    "message": "добавлено: "
   }
 }

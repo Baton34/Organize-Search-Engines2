@@ -130,5 +130,13 @@
   "nameUnique": {
     "message": "Name must be unique!",
     "description": "Name of addable folder must not equal existing search engine or folder name"
+  },
+  "deletedEngines": {
+    "message": "deleted: ",
+    "description": "Text in notificatoin when OSE2 engines deleted on browser start"
+  },
+  "addedEngines": {
+    "message": "added: ",
+    "description": "Text in notificatoin when OSE2 engines added on browser start"
   }
 }

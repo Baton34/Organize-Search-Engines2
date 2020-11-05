@@ -145,6 +145,12 @@
 			else if (target.className.startsWith('spitem')) {
 				tree.insertNode(tree.getNodeByName(data),tree.getNodeByName(targedId));
 			}
+/*			if (ControlKeyPressed && target.className.startsWith('sfitem')) {
+				tree.addChild(tree.getNodeByName(data),tree.getNodeByName(targedId));
+			} else {
+				tree.insertNode(tree.getNodeByName(data),tree.getNodeByName(targedId));
+			};
+*/
 			let curr=targedId;
 			renderList();
 			setCurrent(curr);
@@ -160,11 +166,12 @@
 	function dragEnd_handler(e) {
 	}
 	
-// -------------------------------------	
+// ------------------------------------
+//	let ControlKeyPressed=false;
 	let tree=new Tree('0');
 	let current=null;
 	await sleep(100);
-	await browser.runtime.sendMessage({getTree: true}).then(	getTreeCb,onError);
+	await browser.runtime.sendMessage({getTree: true}).then(getTreeCb,onError);
 	await renderList();
 	const placeholders = Array.from(document.querySelectorAll('[data-i18n]'));
      placeholders.forEach(span => {
@@ -227,5 +234,16 @@
 	async function saveButton(){
 		await browser.runtime.sendMessage({saveTree: tree});
 	};
-
+/*
+	document.addEventListener('keydown', event => {
+		if (event.keyCode==17) {
+			ControlKeyPressed=true;
+		}
+	});
+	document.addEventListener('keyup', event => {
+		if (event.keyCode==17) {
+			ControlKeyPressed=false;
+		}
+	});
+*/	
 }());

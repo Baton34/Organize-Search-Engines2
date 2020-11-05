@@ -66,7 +66,6 @@
 				if (!e.target.dataset.id) {
 					target=e.target.parentElement;
 				}
-				console.log(e.target);
 				const id=target.dataset.id;
 				const icon=target.querySelector('.icon img').src;
 				browser.runtime.sendMessage({setDefault: id, favIconUrl: icon}).then(()=> {

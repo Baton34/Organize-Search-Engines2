@@ -18,7 +18,7 @@ class Node {
 		// this.id=Math.floor((Math.random() * 10000) + 1)+name;
 		this.name=name;
 		this.icon=null;
-		this.type=0;
+		this.type=0; // 0 - engine, 1 - folder, 2 -
 		this.parent=null;
 		this.children=[];
 	}

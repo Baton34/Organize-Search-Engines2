@@ -54,7 +54,7 @@ const config = await (async function() {
 				}
 				let node=new Node(engine.name);
 				node.icon=engine.favIconUrl;
-				node.type=0; // 0 - engine, 1 - folder, 2 - 
+				node.type=0;  
 				tree.addNode(node); 
 			}
 			sett.engineTree=tree;
@@ -133,15 +133,69 @@ async function notify(message) {
 	}
 }
 
+const checkEnginesUpdate=async function() {
+	let checkState="";
+	let tree=new Tree('0');
+	tree.fillIn(settings.engineTree);
+	let engines = await browser.search.get();
+	let nodesToDelete=[];
+	let callback = function(node) {
+		if (node.type == 0 && node.parent) {
+			const engineIndex=engines.findIndex(({name}) => name===node.name);
+			if (engineIndex >= 0) {
+				engines.splice(engineIndex,1);
+			} else{
+				nodesToDelete.push(node);
+			};
+		};
+	};
+	tree.contains(callback);
+	if (nodesToDelete.length>0) {
+		checkState+=browser.i18n.getMessage("deletedEngines");
+		for (let i=0; i<nodesToDelete.length; i++){
+			tree.deleteNode(nodesToDelete[i],false);
+			checkState+=nodesToDelete[i].name+", ";
+		};
+		checkState+="\n";
+	};
+	if (engines.length>0){
+		checkState+=browser.i18n.getMessage("addedEngines");
+		for (let i=0; i<engines.length; i++){
+			let node=new Node(engines[i].name);
+			node.icon=engines[i].favIconUrl;
+			node.type=0;  
+			tree.addNode(node);
+			checkState+=engines[i].name+", ";
+		};
+		checkState+="\n";		
+	};
+	if (checkState!="") {
+		settings.engineTree=tree;
+		await config.writeConfig();
+	};
+	
+	return Promise.resolve(checkState);
+}
+
+async function enginesUpdateChecked(checkState) {
+	if (checkState!="") {
+		browser.notifications.create({
+			"type": "basic",
+			"title": browser.i18n.getMessage("oseName"),
+			"message": checkState
+		});
+	};
+}
 
 
 /* -------------------------------------------------------- */
 	settings=await config.readConfig();
 	if (config.getNeedWriteConfig()) { 
 		await config.writeConfig();
-	};
-
-	//--
+	}
+	else {
+		checkEnginesUpdate().then(enginesUpdateChecked);
+	}
 	browser.runtime.onMessage.addListener(notify);
 	updateButton();
 

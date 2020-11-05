@@ -10,6 +10,9 @@
 * изменение порядка плагинов в списке
 * ~~редактирование и удаление плагинов~~
 * ~~поиск во всех плагинах папки нажатием одной кнопки~~
+* обновление внутреннего списка плагинов при их добавлении-удалении в браузере
+
+При первом запуске OSE2 импортирует поисковые плагины из браузера (только имена и иконки, больше не позволяет webextention) и все последующие изменения производятся уже в этом изменённом списке внутри OSE2.
 
 Особая благодарность автору плагина"Classical Search Bar" 田生 за его идею и код. Также большое спасибо сайту w3schools.com за примеры, а также Cho S. Kim (https://code.tutsplus.com/ru/articles/data-structures-with-javascript-tree--cms-23393) за идею реализации "дерева".
 
@@ -28,6 +31,9 @@ Provides advanced features for managing search plug-ins in:
 * changing the order of plugins in the list
 * ~~editing and deleting plugins~~
 * ~~search with all search plugins in a folder with the click of a button~~
+* updating the internal list of plugins when adding or removing them in the browser
+
+When you start OSE2 for the first time, it imports search plugins from the browser (only names and icons, webextention does not allow anything else) and all subsequent changes are made in this list inside OSE2.
 
 Special thanks to the author of the "Classical Search Bar" plugin 田生 for his idea and code. Also many thanks to w3schools.com for the examples, and also to Cho S. Kim (https://code.tutsplus.com/ru/articles/data-structures-with-javascript-tree--cms-23393) for the idea of implementation "tree".
 
