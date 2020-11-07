@@ -3,7 +3,7 @@
   "manifest_version": 2,
   "name": "__MSG_oseName__",
   "description": "__MSG_oseDescription__",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "default_locale": "en",
   "icons": {
     "48": "search.svg"
