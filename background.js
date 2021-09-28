@@ -100,7 +100,6 @@ const catchRequest=async function(details){
 		const searchTerms = url.searchParams.get('searchTerms') || '';
 		let querying = browser.tabs.query({
 			currentWindow: true,
-			status: "loading",
 			title: "9f098a71-45f7-4380-a829-25a6f86503bd.invalid/search?searchTerms=*"
 		});
 		querying.then(closeTabs, onError);

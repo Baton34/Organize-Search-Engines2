@@ -8,7 +8,6 @@ body {
 	white-space: nowrap;
 	font: message-box;
 	font-size: 12px;
-	cursor: default;
 	padding-bottom: 2px;
     line-height: 24px;
 }
