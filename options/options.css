@@ -269,3 +269,16 @@ input[type="file"] {
   opacity: 0;
   margin: 0 -1px -1px 0;
 }
+
+.icon svg {
+	fill: currentColor;
+	position:relative;
+	top: 4px;
+	left: -3px;
+}
+
+.config-content svg {
+	position:relative;
+	top: 4px;
+	fill: currentColor;
+}
