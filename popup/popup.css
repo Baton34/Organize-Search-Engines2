@@ -28,9 +28,14 @@ body {
   transform: translateY(-50%);
   margin: 5px 6px 0px 4px;
   fill: currentcolor;
-  vertical-align: text-top;
+
 }
 #engineList .spitem .icon img {
+  width: 16px;
+  height: 16px;
+  vertical-align: -4px;
+}
+#engineList .sfitem .icon svg {
   width: 16px;
   height: 16px;
   vertical-align: -4px;
